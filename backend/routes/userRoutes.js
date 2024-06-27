@@ -5,7 +5,9 @@ import { authUser,
     getUserProfile,
     updateUserProfile
  } from '../controllers/userController.js';
+ 
 import { get } from 'mongoose';
+
 const router = express.Router();
 
 router.post('/auth', authUser);

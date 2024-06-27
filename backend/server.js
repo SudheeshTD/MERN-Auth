@@ -10,6 +10,9 @@ connectDB();
 
 const app = express();
 
+app.use(express.json()); // Middleware to parse incoming Json Requests
+app.use(express.urlencoded({ extended : true})) // Middleware to parse URL- ENcoded data (Form Submission)
+
 app.use('/api/users', userRoutes);
 
 app.get('/', (req,res) => res.send('Server is ready'))
