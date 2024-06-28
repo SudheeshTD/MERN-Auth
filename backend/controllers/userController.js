@@ -26,7 +26,6 @@ const registerUser = asyncHandler(async (req,res) => {
         email,
         password
     });
-
     if(user) {
         res.status(201).json({
             _id: user._id,
@@ -36,12 +35,8 @@ const registerUser = asyncHandler(async (req,res) => {
     } else {
         res.status(400);
         throw new Error('Invalid user data');
-        
     }
-
 });
-
-
 
 //@Desc      Logout User
 //route      POST /api/users/logout
